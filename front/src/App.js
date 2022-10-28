@@ -5,7 +5,6 @@ import { Footer } from './components/layout/Footer';
 import { ProductsAdm } from './components/ProductsAdm';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-
 function App() {
   return (
     <Router>
