@@ -5,6 +5,7 @@ import data from "./components/back/Data";
 import Header from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { ProductsAdm } from './components/ProductsAdm';
+import { Ventas } from './components/Ventas';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Root from './components/front/Routes/Root';
 
@@ -51,6 +52,7 @@ function App() {
         <br />
         <div className='container container-fluid'>
           <Routes>
+            <Route path={"/listaventas"} element={<Ventas />} />
             <Route path={"/ProductsAdmin"} element={<ProductsAdm />} />
           </Routes>
         </div>
