@@ -32,14 +32,14 @@ export const Header = () => {
             
             <div className='col-12 col-md-3 mt-4 mt-md-0 text-center'>
                 
-                <Link className='nav-link' to='/login'>
+                <Link to='/login'>
                     <span><button className='btn' id="login_btn">Inicie Sesión</button></span>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </Link>
                            
                 
-                <Link className='nav-link' to='/cart'>
-                    <i class='fa fa-shopping-cart fa-2x text-white' aria-hidden="true"></i>
+                <Link to='/cart'>
+                    <i class='fa fa-shopping-cart fa-2x text-white' aria-hidden="false"></i>
                     <span className='ml-1' id='cart_count'>0</span>
                 </Link>
                 

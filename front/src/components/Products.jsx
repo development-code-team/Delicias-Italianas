@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Products.css";
+import "../Styles/Products.css";
 
 // PRODUCT AND CART connection add the onClick function to add products to the cart
 
@@ -10,7 +10,7 @@ const Products = ({productItems, handleAddProduct}) => {
 
     <div className='products'>
       {productItems.map((productItem)=> (
-        <div className='card'>
+        <div className='card1'>
           <div>
             <img
               className='product-image'
@@ -20,7 +20,7 @@ const Products = ({productItems, handleAddProduct}) => {
           </div>
 
           <div>
-            <h3 className='product-name'> {productItem.name}</h3>
+            <h5 className='product-name'> {productItem.name}</h5>
           </div>
 
           <div className='product-price'>${productItem.price}</div>
