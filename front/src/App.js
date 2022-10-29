@@ -1,12 +1,13 @@
 import './Styles/App.css';
 
 import React, { useState } from 'react';
-import data from "./components/back/Data";
+import data from "./components/json/Data";
 import Header from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { ProductsAdm } from './components/ProductsAdm';
+import { Home } from './components/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Root from './components/front/Routes/Root';
+import Root from './components/routes/Root';
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
         <div className='container container-fluid'>
           <Routes>
             <Route path={"/ProductsAdmin"} element={<ProductsAdm />} />
+            <Route path={"/Home"} element={<Home />} />
           </Routes>
         </div>
         

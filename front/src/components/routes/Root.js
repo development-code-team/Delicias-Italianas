@@ -4,9 +4,9 @@ import React from 'react';
 // STEP 2 Import the Route, Routes from the router-dom
 
 // STEP 3 after creating a products jsx import it here in the Route
-import Products from "../Products/Products";
+import Products from "../Products";
 import { Route, Routes } from "react-router-dom";
-import Cart from '../Cart/Cart';
+import Cart from '../Cart';
 
 
 

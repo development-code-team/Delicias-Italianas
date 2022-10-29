@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Cart.css"
+import "../Styles/Cart.css"
 // Step 1: Import the cart in the root
 
 // Step 2 : Use the handleAddProduct function to add items 
