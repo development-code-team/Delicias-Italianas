@@ -3,7 +3,13 @@ import React from 'react';
 
 
 
+
 export const Ventas = () => {
+  //Sumar todas las ventas
+  let total = 0;
+  ventas.map(function (ventas) { 
+    return  total += ventas.valor;
+  })
 
 
   return (
@@ -28,6 +34,12 @@ export const Ventas = () => {
             
             
             }
+
+            <tr>
+              <th id='total' colSpan={2}>Total:</th>
+              <th id='sumaTotal'>{total}</th>
+            </tr>
+                               
 
           </tbody>
         </table>
