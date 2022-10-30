@@ -31,6 +31,16 @@ nav {
   padding: 1rem 1rem;
 }
 
+
+#total{
+  text-align: right;
+
+  }
+
+#sumaTotal{
+  text-align: left;
+}
+
 #search_btn {
   background-color: #febd69;
 }
