@@ -624,3 +624,16 @@ ul.CTAs a {
   font-size: 0.8rem;
   color: grey;
 }
+.rojo
+{
+  color: red;
+
+}
+.amarillo
+{
+  color:orange;
+}
+.alto{
+height: 100px;
+margin-top: 50px;
+}

@@ -60,7 +60,7 @@ export const ProductosAdd = () => {
 
       <Form.Group className="mb-3" controlId="desProd">
         <Form.Label>Descripcion</Form.Label>
-        <FloatingLabel controlId="floatingTextarea2" label="Descariba el plato">
+        <FloatingLabel controlId="floatingTextarea2" >
         <Form.Control
           as="textarea"
           
@@ -76,26 +76,35 @@ export const ProductosAdd = () => {
 
 
 
-      <Form.Label>Califique el plato</Form.Label>
-      <Form.Select aria-label="Califique el Plato" id="calPlat">
-      <option>0</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </Form.Select>
-    
+     
+      <div class="form-group">
+                                          <label for="tipo">Califique el plato</label>
+                                           <select class="form-control" id="calPlato" name="calPlato">
+                                           <option value="1">0</option>
+                                             <option value="1">1</option>
+                                             <option value="2">2</option>
+                                             <option value="3">3</option>
+                                             <option value="4">4</option>
 
-    <Form.Label>Seleccione la categoria del plato</Form.Label>
-      <Form.Select aria-label="Seleccione La categoria" id="categoriaPlat">
+                                             <option value="5">5</option>
+
+                                             
+                                             
+                                            
+                                            </select>
+                                      </div>
+    
+ <div class="form-group">
+   <label for="tipo">Categoria del plato</label>
+   <select class="form-control" id="calPlato" name="calPlato">     
       <option></option>
       <option value="Pastas">Pastas</option>
       <option value="Sopas">Sopas</option>
       <option value="Arroces">Arroces</option>
       <option value="Carnes">Carnes</option>
       <option value="Pizza">Pizza</option>
-    </Form.Select>
+    </select>
+    </div>
 
  <Form.Group className="mb-3" controlId="vendPlato">
         <Form.Label>Vendedor</Form.Label>

@@ -57,6 +57,7 @@ function App() {
             <Route path={"/ProductsAdmin"} element={<ProductsAdm />} />
             <Route path={"/Home"} element={<Home />} />
             <Route path={"/ProductosAdd"} element={<ProductosAdd />} />
+     
           </Routes>
         </div>
         
