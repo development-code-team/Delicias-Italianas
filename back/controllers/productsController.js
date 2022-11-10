@@ -1,7 +1,20 @@
-exports.getProducts=(req,res,next) => {
-    res.status(200).json({
+//Importar modelo
+const producto = require("../models/product")
+
+//Impor manejo de errores
+const catchAsyncErrors = require("../middleware/catchAsyncErrors");
+const ErrorHandler = require("../utils/errorHandler");
+
+//Ejemplos para pruebas de Ventas
+
+exports.newProduct=catchAsyncErrors( async (req,res,next) => {
+    const product = await producto.create(req.body);
+    
+    res.status(201).json({
         success:true,
-        message: "En esta ruta ud va a poder ver todos los productos"
+        product
     })
 
-}
+})
+
+//Ejemplos para pruebas de Ventas
