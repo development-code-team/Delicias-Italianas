@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import '../../Styles/EstilosMenu2.css';
 
 
-export const Header = () => {
+export const Header = ({cartItems}) => {
   return (
     <Fragment>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -57,7 +57,9 @@ export const Header = () => {
    
     <Link to='/cart'>
             <i class='fa fa-shopping-cart fa-1  ml-4 tamIcon' aria-hidden="false"></i>
-            <span className='ml-2 fondoCarro' id='cart_count'>0</span>
+            <span className='ml-2 fondoCarro' id='cart_count'>
+                {cartItems.length === 0 ? "0" : cartItems.length}
+            </span>
    </Link>
 
 

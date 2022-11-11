@@ -20,7 +20,6 @@ const ventasSchema=mongoose.Schema({
 
     }],
 
-
     total:{
         type:Number,
         required: true

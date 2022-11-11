@@ -49,7 +49,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-        <Header />
+        <Header cartItems={cartItems}/>
         <br />
         <div className='container container-fluid'>
           <Routes>

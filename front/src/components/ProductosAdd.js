@@ -157,14 +157,9 @@ export const ProductosAdd = () => {
           <th>id</th>
           <th>Nombre</th>
           <th>Precio</th>
-          <th>Imagen</th>
-          <th>Descrpicion</th>
-          <th>Calificacion</th>
+          <th>Descripcion</th>
           <th>Categoria</th>
-          <th>Vendedor</th>
           <th>Inventario</th>
-          <th>#Calificaciones</th>
-          <th>Opiniones</th>
           <th>Eliminar</th>
           <th>Editar</th>
         </tr>
@@ -172,16 +167,11 @@ export const ProductosAdd = () => {
       <tbody>
         <tr>
           <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>xxxx</td>
-           <td>xxxx</td>
-            <td>xxxx</td>
-             <td>xxxx</td>
-              <td>xxxx</td>
-               <td>xxx</td>
-                <td>xxxx</td>
+          <td>Pizza</td>
+          <td>10000</td>
+            <td>Deliciosa pizza</td>
+               <td>Italiano</td>
+                <td>12</td>
                
                 <td><svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill rojo" viewBox="0 0 16 16"><path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/></svg></td>
                 <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square amarillo" viewBox="0 0 16 16">
@@ -191,16 +181,11 @@ export const ProductosAdd = () => {
         </tr>
         <tr>
           <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>xxxx</td>
-           <td>xxxx</td>
-            <td>xxxx</td>
-             <td>xxxx</td>
-              <td>xxxx</td>
-               <td>xxxx</td>
-               <td>xxxx</td>
+          <td>Pasta</td>
+          <td>15000</td>
+            <td>Deliciosa Pasta</td>
+               <td>Italiano</td>
+               <td>23</td>
               
                 <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill rojo" viewBox="0 0 16 16"><path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/></svg></td>
                 <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square amarillo" viewBox="0 0 16 16">
