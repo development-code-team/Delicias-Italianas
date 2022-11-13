@@ -11,7 +11,8 @@ const data = {
         vendedor : "Andres Perez",
         inventario : 81,
         numCalificaciones : 39,
-        opiniones: []
+        opiniones: [],
+        fechaCreacion:"10-01-2022"
     },
     {
         id: '2',
@@ -24,7 +25,8 @@ const data = {
         vendedor : "Andres Perez",
         inventario : 42,
         numCalificaciones : 12,
-        opiniones: []
+        opiniones: [],
+        fechaCreacion:"12-03-2022"
     },
     {
         id: '3',
@@ -37,7 +39,8 @@ const data = {
         vendedor : "Andres Perez",
         inventario : 42,
         numCalificaciones : 87,
-        opiniones: []
+        opiniones: [],
+        fechaCreacion:"20-04-2022"
     },
     {
         id: '4',
@@ -50,7 +53,8 @@ const data = {
         vendedor : "Andres Perez",
         inventario : 42,
         numCalificaciones : 86,
-        opiniones: []
+        opiniones: [],
+        fechaCreacion:"01-05-2022"
     },
     {
         id: '5',
@@ -63,7 +67,8 @@ const data = {
         vendedor : "Andres Perez",
         inventario : 25,
         numCalificaciones : 39,
-        opiniones: []
+        opiniones: [],
+        fechaCreacion:"10-05-2022"
     },
     {
         id: '6',
@@ -76,7 +81,8 @@ const data = {
         vendedor : "Andres Perez",
         inventario : 35,
         numCalificaciones : 86,
-        opiniones: []
+        opiniones: [],
+        fechaCreacion:"19-06-2022"
     },
     {
         id: '7',
@@ -89,7 +95,8 @@ const data = {
         vendedor : "Andres Perez",
         inventario : 45,
         numCalificaciones : 54,
-        opiniones: []
+        opiniones: [],
+        fechaCreacion:"23-06-2022"
     },
     {
         id: '8',
@@ -102,7 +109,8 @@ const data = {
         vendedor : "Andres Perez",
         inventario : 35,
         numCalificaciones : 16,
-        opiniones: []
+        opiniones: [],
+        fechaCreacion:"11-07-2022"
     }
 ]}
 

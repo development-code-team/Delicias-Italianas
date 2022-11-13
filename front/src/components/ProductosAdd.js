@@ -15,7 +15,7 @@ import {
 } from "reactstrap";
 
 
-class TestP extends React.Component {
+class ProductosAdd extends React.Component {
     state = {
         data: data.productItems,
         modalActualizar: false,
@@ -366,4 +366,4 @@ class TestP extends React.Component {
     );
   }
 }
-export default TestP;
+export default ProductosAdd;
