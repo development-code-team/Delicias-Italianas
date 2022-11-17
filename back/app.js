@@ -5,10 +5,10 @@
     app.use(express.json());
     
     const productos = require("./routes/products")
-    //const usuarios = require("./routes/auth")
+    const usuarios = require("./routes/auth")
 
     app.use('/api',productos)
-    //app.use('/api',usuarios)
+    app.use('/api',usuarios)
 
     
 

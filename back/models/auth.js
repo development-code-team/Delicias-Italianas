@@ -1,9 +1,9 @@
 const mongoose = require("mongoose")
 const validator = require("validator")
-//const bcrypt = require("bcryptjs")
-//const { kMaxLength } = require("buffer")
+const bcrypt = require("bcryptjs")
+const { kMaxLength } = require("buffer")
 
-const usuarioShema = new mongoose.Schema({
+const usuarioSchema = new mongoose.Schema({
     nombre:{
         type:String,
         required: [true, "Por favor ingrese el nombre"],
@@ -19,7 +19,7 @@ const usuarioShema = new mongoose.Schema({
     password:{
         type: String,
         required:[true, "Por favor registre una contraseña"],
-        minlenght: [8, "Tu contraseña no puede tener menos de 8 caracteres"],
+        minlength: [8, "Tu contraseña no puede tener menos de 8 caracteres"],
         select: false
     },
     avatar: {
@@ -43,6 +43,12 @@ const usuarioShema = new mongoose.Schema({
 
     resetPasswordToken: String,
     resetPasswordExpire: Date
+    })
+    usuarioSchema.pre("save", async function(next){
+       if(!this.isModified("password")){
+            next()
+       }
+       this.password = await bcrypt.hash(this.password, 10)
 })
 
-module.exports = mongoose.model("auth",usuarioShema)
+module.exports = mongoose.model("auth",usuarioSchema)

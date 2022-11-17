@@ -31,20 +31,19 @@ export const Header = () => {
     <img src='./images/productos/logo2.png' alt='Restaurante Delicias Italianas Logo' ></img>
     </a>
 
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    <li class="nav-item">
-        <a class="nav-link " href="/ProductsAdmin">Admin</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link " href="/listaventas">Ventas</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link " href="http://localhost:3000/">Menu</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link " href="/ProductosAdd">Add</a>
-    </li>
-    </ul>
+    <div className='ml-4 dropdown d-inline'>
+        <Link to="#!" className="btn dropdown-toggle text-white mr-4" type='button'
+        id="dropDownMenu" data-toggle="dropdown" aria-haspopup="true">
+            <span style={{ color: 'grey' }}>Panel de Control</span>
+        </Link>
+        <div className='dropdown-menu' aria-labelledby='dropDownMenu'>
+            <Link className='dropdown-item' to="/admin/Dashboard">Adm. Productos</Link>
+            <Link className='dropdown-item' to="/listaventas">Ventas</Link>
+            <Link className='dropdown-item' to="/">Menu</Link>
+            <Link className='dropdown-item' to="/">Mi cuenta</Link>
+            <Link className='dropdown-item' to="/">Cerrar Sesion</Link>
+        </div>
+    </div>
     
 </div>
 
@@ -54,6 +53,7 @@ export const Header = () => {
 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
 <button class="btn btn-outline-warning" type="submit">Search</button>
 </form>
+
    
     <Link to='/cart'>
             <i class='fa fa-shopping-cart fa-1  ml-4 tamIcon' aria-hidden="false"></i>

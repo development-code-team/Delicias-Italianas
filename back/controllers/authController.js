@@ -12,7 +12,7 @@ exports.registroUsuario = catchAsyncErrors(async(req, res, next) =>{
         email,
         password,
         avatar:{
-            pulic_id: "ANd9GcSYaWJibmdt2yjA7hZpUdpPpL0HneTxiVxtAg&usqp",
+            public_id: "ANd9GcSYaWJibmdt2yjA7hZpUdpPpL0HneTxiVxtAg&usqp",
             url:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYaWJibmdt2yjA7hZpUdpPpL0HneTxiVxtAg&usqp=CAU"
         }
     })

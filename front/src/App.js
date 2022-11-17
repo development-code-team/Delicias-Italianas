@@ -10,6 +10,8 @@ import { Ventas } from './components/Ventas';
 import { ProductosAdd } from './components/ProductosAdd';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Root from './components/routes/Root';
+import { Dashboard } from './components/admin/Dashboard';
+import ProductsList from './components/admin/ProductList';
 
 function App() {
 
@@ -50,14 +52,15 @@ function App() {
     <Router>
     <div className="App">
         <Header />
-        <br />
+        
         <div className='container container-fluid'>
           <Routes>
             <Route path={"/listaventas"} element={<Ventas />} />
             <Route path={"/ProductsAdmin"} element={<ProductsAdm />} />
             <Route path={"/Home"} element={<Home />} />
             <Route path={"/ProductosAdd"} element={<ProductosAdd />} />
-     
+            <Route path={"/admin/Dashboard"} element={<Dashboard />} />
+            <Route path={"/admin/listaProdcutos"} element={<ProductsList />} />
           </Routes>
         </div>
         
