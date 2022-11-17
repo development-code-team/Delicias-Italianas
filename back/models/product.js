@@ -39,7 +39,13 @@ const productosSchema=mongoose.Schema({
         maxLength:[5,"Cantidad maxima del producto no puede sobrepasar 99999"],
         default:0
     },
-    
+    //Relación de Usuario Producto
+    /*user:{
+        type: mongoose.Schema.ObjectId,
+        ref:'User',
+        required:true
+    },*/
+
     fechaCreacion:{
         type:Date,
         default:Date.now
