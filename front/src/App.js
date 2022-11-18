@@ -10,6 +10,7 @@ import { Ventas } from './components/Ventas';
 import ProductosAdd from './components/ProductosAdd';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Root from './components/routes/Root';
+import { Login } from './components/user/Login'
 
 function App() {
 
@@ -57,6 +58,7 @@ function App() {
             <Route path={"/ProductsAdmin"} element={<ProductsAdm />} />
             <Route path={"/Home"} element={<Home />} />
             <Route path={"/ProductosAdd"} element={<ProductosAdd />} />
+            <Route path={"/login"} element={<Login />} />
      
           </Routes>
         </div>
