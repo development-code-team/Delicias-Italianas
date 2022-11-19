@@ -16,11 +16,11 @@ router.route('/newproduct').post(/*isAuthenticateUser, authorizeRoles("admin"),*
 // Metodo get all productos
 router.route('/getall').get(getAll)
 
-// Metodo get productos
-router.route('/getproducto/:id').get(getProductoId)
+// Metodo get producto
+router.route('/getproducto').get(getProductoId)
 
 // Metodo put para cambiar un producto
-router.route('/updateproducto/:id').put(/*isAuthenticateUser, authorizeRoles("admin"),*/ updateProducto)
+router.route('/updateproducto').put(/*isAuthenticateUser, authorizeRoles("admin"),*/ updateProducto)
 
 // Metodo delete para eliminar un producto
 router.route('/deleteproducto/:id').delete(/*isAuthenticateUser, authorizeRoles("admin"),*/ deleteProducto)
