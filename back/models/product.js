@@ -40,11 +40,11 @@ const productosSchema=mongoose.Schema({
         default:0
     },
     //Relación de Usuario Producto
-    /*user:{
+    user:{
         type: mongoose.Schema.ObjectId,
         ref:'User',
         required:true
-    },*/
+    },
 
     fechaCreacion:{
         type:Date,
