@@ -56,7 +56,7 @@ export const Login = () => {
 
                                 <button id='login_button' type='submit' className='btn btn-block py-3 mt-4'>LOGIN</button>
 
-                                <Link to="/register" className='float-right mt-3'>Usuario nuevo? - Registrese aquí</Link>
+                                <Link to="/register" className='float-right mt-1'>Usuario nuevo? - Registrese aquí</Link>
                                 <p></p>
                             </form>
                         </div>

@@ -11,7 +11,8 @@ import ProductosAdd from './components/ProductosAdd';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Root from './components/routes/Root';
 import { Login } from './components/user/Login'
-import { Register } from './components/user/Register'
+import { Register } from './components/user/Register';
+
 
 function App() {
 
