@@ -7,7 +7,7 @@ import uniqid from 'uniqid'
 import axios from 'axios'
 // Alertas bonitas
 import Swal from 'sweetalert2'
-
+import FileBase64 from 'react-file-base64';
 
 
 
@@ -72,7 +72,7 @@ function AgregarProductos(){
             <Form className='col-sm-6 offset-3'>
                 <Form.Group className='mb-3' controlId='imagen'>
                     <Form.Label> Imagen </Form.Label>
-                    <Form.Control type="file" placeholder="Ingrese una imagen" value={imagen} onChange={(e)=>{setImagen(e.target.value)}}></Form.Control>
+                    <div><FileBase64 multiple={ false } onDone={ ({base64})=> setImagen(base64)} /></div>
                 </Form.Group>
             </Form>
 

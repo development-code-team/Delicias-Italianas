@@ -2,6 +2,7 @@
     const app = express();
     const errorMiddleware = require("./middleware/errors")
     const cookieParser = require("cookie-parser")
+    
 
     //Uso de constantes importadas
     app.use(express.json());
@@ -16,6 +17,7 @@
     app.use('/api',productos)
     app.use('/api',ventas)
     app.use('/api',usuarios)
+
 
     //MiddleWare para manejar errores
     app.use(errorMiddleware)

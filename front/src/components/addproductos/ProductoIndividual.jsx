@@ -6,18 +6,13 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 // Mejores alertas
 import Swal from 'sweetalert2'
+import FileBase64 from 'react-file-base64';
 
 // importa el producto de la lista de usarios 
 function ProductoIndividual({producto}){
 
 
     const navegar = useNavigate()
-
-    // Para animación de scroll al bajar
-
-    useEffect(() => {
-        AOS.init()
-    }, [])
 
 
    
@@ -42,7 +37,7 @@ function ProductoIndividual({producto}){
                             <li className='list-group-item'>{producto.nombre}</li>
                             <li className='list-group-item'>{producto.precio}</li>
                             <li className='list-group-item'>{producto.descripcion}</li>
-                            <li className='list-group-item'>{producto.imagen}</li>
+                            <img className='list-group-item' src= {producto.imagen} ></img>
                             <li className='list-group-item'>{producto.inventario}</li>
                             <li className='list-group-item'>{producto.fechaCreacion}</li>
                         </ul>
