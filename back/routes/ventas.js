@@ -15,8 +15,10 @@ router.route("/ventas/new").post(newVenta);
 // Metodo get all ventas
 router.route('/allventas').get(async (req, res)=>{
     const ventas = await Venta.find();
-    console.log(ventas);
-    res.json(ventas);    
+    //console.log(ventas);
+    res.json({
+        success:true,
+        ventas});    
 });
 
 // Metodo get 1 venta
