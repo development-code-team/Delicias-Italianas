@@ -42,7 +42,10 @@ export const Header = ({cartItems}) => {
         <a class="nav-link " href="http://localhost:3000/">Menu</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link " href="/ProductosAdd">Add</a>
+        <a class="nav-link " href="/agregarproducto"> Añadir un producto </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="/listaproductos"> Visualizar productos </a>
     </li>
     </ul>
     

@@ -25,22 +25,41 @@ exports.getAll=catchAsyncErrors( async (req,res,next) => {
 
 // Metodo get productos Id
 exports.getProductoId=catchAsyncErrors( async (req,res,next) => {
-    const product = await producto.findById(req.params.id)
-    res.json(product);
+        producto.find({idproducto: req.body.idproducto}, function(docs, err){
+        if(!err){
+            res.json(docs)
+        }else{
+            res.send(err)
+        }
+    })
 
 })
+
 
 // Metodo put para actualizar un producto
-exports.updateProducto=catchAsyncErrors( async (req,res,next) => {
-    const { nombre, precio, descripcion, imagen, inventario } = req.body;
-    const newProduct = {nombre, precio, descripcion, imagen, inventario};
+exports.updateProducto=catchAsyncErrors(async (req,res) => {
     // Se actualiza con el newTask que es el nuevo objeto creado
-    await producto.findByIdAndUpdate(req.params.id, newProduct)
-    res.json({status: 'Producto actualizado exitosamente'})
+        producto.findOneAndUpdate({idproducto:req.body.idproducto}, {
+        nombre: req.body.nombre,
+        precio: req.body.precio,
+        descripcion: req.body.descripcion,
+        imagen: req.body.imagen,
+        fecha: Date.now,
+        inventario: req.body.inventario
+    }, (err) => {
+        if(!err){
+            res.send('Producto actualizado correctamente')
+        }else{
+            res.send(err)
+        }
+    })  
 })
+
+
+
 
 // Metodo delete para eliminar un producto
 exports.deleteProducto=catchAsyncErrors( async (req,res,next) => {
     await producto.findByIdAndRemove(req.params.id);
-    res.json({status: 'Producto eliminado exitosamente'})
+    res.send('Producto eliminado exitosamente')
 })

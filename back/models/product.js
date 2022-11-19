@@ -20,18 +20,12 @@ const productosSchema=mongoose.Schema({
       required:[true,"Por favor registre una descripcion para el producto."]
     },
     
-    imagen:[
-        {
-            public_id:{
-                type:String,
-                required:true
-            },
-            url:{
-                type:String,
-                required:true
-            }
-        }
-    ],
+    imagen:{
+        
+        type:String,
+        required:true
+        
+    },
     
     inventario:{
         type: Number,
@@ -49,7 +43,12 @@ const productosSchema=mongoose.Schema({
     fechaCreacion:{
         type:Date,
         default:Date.now
+    },
+
+    idproducto: {
+        type:String
     }
+
 
 })
 
