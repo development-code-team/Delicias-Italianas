@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import { useAlert } from 'react-alert';
+//import { useAlert } from 'react-alert';
 import { useDispatch, useSelector } from 'react-redux';
 import MetaData from '../layout/MetaData'
 import { register, clearErrors } from "../../actions/userActions"
@@ -15,7 +15,7 @@ export const Register = () => {
     const { nombre, email, password } = user;
     const [avatar, setAvatar] = useState("");
     const [avatarPreview, setAvatarPreview] = useState("https://thumbs.dreamstime.com/b/default-avatar-profile-icon-vector-default-avatar-profile-icon-vector-social-media-user-image-vector-illustration-227787227.jpg")
-    const alert = useAlert();
+    //const alert = useAlert();
     const dispatch = useDispatch();
     const { isAuthenticated, error, loading } = useSelector(state => state.auth)
 
@@ -26,7 +26,7 @@ export const Register = () => {
         if (error) {
             dispatch(clearErrors)
         }
-    }, [dispatch, isAuthenticated, error, alert])
+    }, [dispatch, isAuthenticated, error])
 
     const submitHandler = (e) => {
         e.preventDefault();

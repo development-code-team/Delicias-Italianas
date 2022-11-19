@@ -8,7 +8,7 @@ const cloudinary= require("cloudinary")
 
 //Registrar un nuevo usuario /api/usuario/registro
 
-exports.registroUsuario = catchAsyncErrors(async(req, res, next) =>{
+exports.registroUsuario= catchAsyncErrors(async (req, res, next) =>{
     const {nombre, email, password} = req.body;
 
     const result= await cloudinary.v2.uploader.upload(req.body.avatar, {
