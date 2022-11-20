@@ -66,14 +66,12 @@ function App() {
             <Route path={"/ProductsAdmin"} element={<ProductsAdm />} />
             <Route path={"/Home"} element={<Home />} />
             <Route path={"/ProductosAdd"} element={<ProductosAdd />} />
-<<<<<<< HEAD
             <Route path={"/login"} element={<Login />} />
             <Route path={"/register"} element={<Register />} />
-=======
             <Route path={"/agregarproducto"} element={<AgregarProductos/>}></Route>
             <Route path={"/listaproductos"} element={<ListaProductos/>}></Route>
             <Route path={"/editarproducto/:idproducto"} element={<EditarProducto/>} exact></Route>
->>>>>>> Atlas
+
      
           </Routes>
         </div>
