@@ -14,7 +14,7 @@ const Cart = ({
     handleCartClearance
     }) => {
     // Calculate the total price
-  const totalPrice = cartItems.reduce((price, item) => price + item.quantity * item.price, 0);
+  const totalPrice = cartItems.reduce((precio, item) => precio + item.quantity * item.precio, 0);
   return (
     <div className="cart-items">
         <h2 className='cart-items-header'> Productos en el carrito</h2>
@@ -33,13 +33,13 @@ const Cart = ({
         
         <div>
             {cartItems.map((item) => (
-                <div key={item.id} className="cart-items-list">
+                <div key={item._id} className="cart-items-list">
                     <img 
                         className="cart-items-image" 
-                        src={item.image} 
+                        src={item.imagen} 
                         alt={item.name}   
                     />
-                    <div className='cart-items-name'>{item.name}</div>
+                    <div className='cart-items-name'>{item.nombre}</div>
                     <div className='cart-items-function'>
                         <button 
                             className='cart-items-add' 
@@ -53,7 +53,7 @@ const Cart = ({
                         </button>
                     </div>
                     <div className='cart-items-price'>
-                        {item.quantity} * ${item.price}
+                        {item.quantity} * ${item.precio}
                     </div>
                 </div>
             ))}
@@ -66,8 +66,9 @@ const Cart = ({
             </div>
 
         </div>
+
     </div>
   )
 }
-
+// En carrito crear una petición post de ventas en el que se tomen los datos del producto, en este caso Item y se envíen al chart de ventas
 export default Cart

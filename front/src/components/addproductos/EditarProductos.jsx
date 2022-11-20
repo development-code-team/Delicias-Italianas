@@ -24,18 +24,22 @@ function EditarProductos(){
     // Para volver atrás al index
     const navegar = useNavigate()
 
-    
+
+ 
     useEffect(() => {
-      axios.get('/api/getproducto', {idproducto:params.idproducto}).then(res =>{
+      axios.post('/api/getproducto', {idproducto:params.idproducto}).then(res =>{
         console.log(res.data[0])
         const dataproducto = res.data[0];
         setNombre(dataproducto.nombre)
         setPrecio(dataproducto.precio)
         setDescripcion(dataproducto.descripcion)
         setImagen(dataproducto.imagen)
+
         setInventario(dataproducto.inventario)
+
+
       })
-    }, [])
+    }, [params])
 
 
 
@@ -86,7 +90,7 @@ function EditarProductos(){
             <Form className='col-sm-6 offset-3'>
                 <Form.Group className='mb-3' controlId='descripcion'>
                     <Form.Label> Descripcion </Form.Label>
-                    <Form.Control type="text" placeholder="Ingrese una descripcion" value={descripcion} onChange={(e)=>{setDescripcion(e.target.value)}}></Form.Control>
+                    <Form.Control type="text"  placeholder="Ingrese una descripción" value={descripcion} onChange={(e)=>{setDescripcion(e.target.value)}}></Form.Control>
                 </Form.Group>
             </Form>
 

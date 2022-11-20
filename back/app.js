@@ -13,6 +13,11 @@
     const ventas = require("./routes/ventas")    //Import de Rutas de Ventas
     const usuarios = require("./routes/auth")
 
+
+    const bodyParser = require('body-parser')
+    app.use(bodyParser.json())
+    app.use(bodyParser.urlencoded({extended:'true'}))
+
     
     app.use('/api',productos)
     app.use('/api',ventas)

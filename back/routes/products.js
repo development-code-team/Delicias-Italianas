@@ -17,7 +17,7 @@ router.route('/newproduct').post(/*isAuthenticateUser, authorizeRoles("admin"),*
 router.route('/getall').get(getAll)
 
 // Metodo get producto
-router.route('/getproducto').get(getProductoId)
+router.route('/getproducto').post(getProductoId)
 
 // Metodo put para cambiar un producto
 router.route('/updateproducto').put(/*isAuthenticateUser, authorizeRoles("admin"),*/ updateProducto)
