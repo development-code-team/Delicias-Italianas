@@ -25,9 +25,9 @@ exports.getAll=catchAsyncErrors( async (req,res,next) => {
 
 // Metodo get productos Id
 exports.getProductoId=catchAsyncErrors( async (req,res,next) => {
-        producto.find({idproducto: req.body.idproducto}, function(docs, err){
+        producto.find({idproducto:req.body.idproducto}, function(docs, err){
         if(!err){
-            res.json(docs)
+            res.send(docs)
         }else{
             res.send(err)
         }

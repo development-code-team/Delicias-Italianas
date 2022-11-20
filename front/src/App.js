@@ -1,7 +1,5 @@
 import './Styles/App.css';
-
 import React, { useState } from 'react';
-import data from "./components/json/Data";
 import Header from './components/layout/Header';
 import { Footer } from './components/layout/Footer';
 import { ProductsAdm } from './components/ProductsAdm';
@@ -22,14 +20,15 @@ import EditarProducto from './components/addproductos/EditarProductos';
 
 function App() {
 
-  const {productItems} = data;
+  // product items
+
   const [cartItems, setCartItems] = useState([]);
 
   
   const handleAddProduct = (product) =>{
-    const ProductExist = cartItems.find((item) => item.id === product.id);
+    const ProductExist = cartItems.find((item) => item._id === product._id);
     if(ProductExist){
-      setCartItems(cartItems.map((item) => item.id === product.id ? 
+      setCartItems(cartItems.map((item) => item._id === product._id ? 
       {...ProductExist, quantity: ProductExist.quantity + 1} : item)
       );
       } else {
@@ -43,12 +42,12 @@ function App() {
   };
 
   const handleRemoveProduct = (product) =>{
-    const ProductExist = cartItems.find((item) => item.id === product.id);
+    const ProductExist = cartItems.find((item) => item._id === product._id);
     if(ProductExist.quantity === 1){
-      setCartItems(cartItems.filter((item) => item.id !== product.id));
+      setCartItems(cartItems.filter((item) => item._id !== product._id));
     } else {
       setCartItems(
-        cartItems.map((item) => item.id === product.id ? {...ProductExist, quantity: ProductExist.quantity - 1}: item)
+        cartItems.map((item) => item._id === product._id ? {...ProductExist, quantity: ProductExist.quantity - 1}: item)
       )
     }
   }
@@ -80,8 +79,7 @@ function App() {
         
     </div>
 
-    <Root 
-          productItems={productItems} 
+    <Root  
           cartItems={cartItems} 
           handleAddProduct={handleAddProduct}
           handleRemoveProduct={handleRemoveProduct} 

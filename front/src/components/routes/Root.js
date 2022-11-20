@@ -17,7 +17,7 @@ const Root = ({productItems, cartItems, handleAddProduct, handleRemoveProduct, h
   return (
     <Routes>
       <Route 
-        path="/" element={<Products productItems={productItems} handleAddProduct={handleAddProduct} handleRemoveProduct= {handleRemoveProduct}/>}>
+        path="/" element={<Products handleAddProduct={handleAddProduct} handleRemoveProduct= {handleRemoveProduct}/>}>
       </Route>
       <Route 
         path="/cart" element={<Cart cartItems={cartItems} handleAddProduct={handleAddProduct} handleRemoveProduct= {handleRemoveProduct} handleCartClearance= {handleCartClearance}/>}>
