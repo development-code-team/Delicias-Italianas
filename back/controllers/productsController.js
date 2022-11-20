@@ -6,15 +6,23 @@ const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const ErrorHandler = require("../utils/errorHandler");
 
 //Crear nuevo producto
-exports.newProduct=catchAsyncErrors( async (req,res,next) => {
-    const product = await producto.create(req.body);
-    
-    res.status(201).json({
-        success:true,
-        product
+exports.newProduct=catchAsyncErrors( async (req,res) => {
+    const nuevoproducto = new producto({
+        nombre: req.body.nombre,
+        precio: req.body.precio,
+        descripcion: req.body.descripcion,
+        imagen: req.body.imagen, 
+        inventario: req.body.inventario,
     })
-
+    nuevoproducto.save(function(err){
+        if(!err){
+            res.send('Producto agregado correctamente')
+        }else{
+            res.send(err)
+        }
+    })
 })
+
 
 // Metodo get all productos
 exports.getAll=catchAsyncErrors( async (req,res,next) => {
