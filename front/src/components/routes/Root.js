@@ -13,7 +13,7 @@ import Cart from '../Cart';
 // STEP 4 Passing the productItems as props to the Products component here and in the Product.jsx file as well
 // Also pass the handleAddProduct into the home and cart component as props from the app.js
 
-const Root = ({productItems, cartItems, handleAddProduct, handleRemoveProduct, handleCartClearance}) => {
+const Root = ({cartItems, handleAddProduct, handleRemoveProduct, handleCartClearance}) => {
   return (
     <Routes>
       <Route 

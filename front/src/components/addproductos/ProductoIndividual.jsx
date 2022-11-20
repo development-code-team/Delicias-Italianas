@@ -1,12 +1,9 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React from 'react'
 import {Link, useNavigate} from 'react-router-dom'
-// Animaciones
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 // Mejores alertas
 import Swal from 'sweetalert2'
-import FileBase64 from 'react-file-base64';
+
 
 // importa el producto de la lista de usarios 
 function ProductoIndividual({producto}){
@@ -37,7 +34,7 @@ function ProductoIndividual({producto}){
                             <li className='list-group-item'>{producto.nombre}</li>
                             <li className='list-group-item'>{producto.precio}</li>
                             <li className='list-group-item'>{producto.descripcion}</li>
-                            <img className='list-group-item' src= {producto.imagen} ></img>
+                            <img className='list-group-item' src= {producto.imagen} alt={producto.nombre}></img>
                             <li className='list-group-item'>{producto.inventario}</li>
                             <li className='list-group-item'>{producto.fechaCreacion}</li>
                         </ul>
