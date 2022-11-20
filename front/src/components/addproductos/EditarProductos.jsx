@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import {useNavigate} from 'react-router-dom'
 import Swal from 'sweetalert2'
+import FileBase64 from 'react-file-base64';
 
 
 function EditarProductos(){
@@ -90,9 +91,9 @@ function EditarProductos(){
             </Form>
 
             <Form className='col-sm-6 offset-3'>
-                <Form.Group className='mb-3' controlId='Imagen'>
+                <Form.Group className='mb-3' controlId='imagen'>
                     <Form.Label> Imagen </Form.Label>
-                    <Form.Control type="file" placeholder="Ingrese una imagen" value={imagen} onChange={(e)=>{setImagen(e.target.value)}}></Form.Control>
+                    <div><FileBase64 multiple={ false } onDone={ ({base64})=> setImagen(base64)} /></div>
                 </Form.Group>
             </Form>
 

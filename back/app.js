@@ -5,6 +5,7 @@
     const bodyParser = require('body-parser')
     const fileUpload = require('express-fileupload')
 
+
     //Uso de constantes importadas
     app.use(express.json());
     app.use(bodyParser.urlencoded({ extended: true }));
@@ -20,6 +21,7 @@
     app.use('/api',productos)
     app.use('/api',ventas)
     app.use('/api',usuarios)
+
 
     //MiddleWare para manejar errores
     app.use(errorMiddleware)
