@@ -27,8 +27,8 @@ export const Header = ({cartItems}) => {
 
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <a class="navbar-brand mt-2 mt-lg-0" href="/Home">
-    <img src='./images/productos/logo2.png' alt='Restaurante Delicias Italianas Logo' ></img>
+    <a class="navbar-brand mt-2 mt-lg-0" href="/">
+    <img src='../images/productos/logo2.png' alt='Restaurante Delicias Italianas Logo' ></img>
     </a>
 
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -39,7 +39,7 @@ export const Header = ({cartItems}) => {
         <a class="nav-link " href="/listaventas">Ventas</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link " href="http://localhost:3000/">Menu</a>
+        <a class="nav-link " href="/">Menu</a>
     </li>
     <li class="nav-item">
         <a class="nav-link " href="/agregarproducto"> Añadir un producto </a>
