@@ -28,7 +28,7 @@ export const Header = ({cartItems}) => {
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
     <a class="navbar-brand mt-2 mt-lg-0" href="/">
-    <img src='../images/productos/logo2.png' alt='Restaurante Delicias Italianas Logo' ></img>
+    <img src='../images/productos/LOGO2.png' alt='Restaurante Delicias Italianas Logo' ></img>
     </a>
 
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
