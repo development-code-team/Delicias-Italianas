@@ -1,0 +1,29 @@
+.tamIcon
+{
+    color:#AA6E04;
+    font-size: 25px;
+}
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 30%;
+    right: 30px;
+    transform: translateY(-50%);
+    color:#AA6E04;
+}
+#cart_count {
+    background-color: #F4AA06;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.buscarMenu
+{
+    background-color: #F4AA06;
+}
+
+.navbar-nav .nav-link {
+    color: #352102;
+}
