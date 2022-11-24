@@ -31,7 +31,7 @@ const Products = ({handleAddProduct}) => {
           <div>
             <img
               className='product-image'
-              src= {productItem.imagen}
+              src= {productItem.imagen[0].url}
               alt= {productItem.name}
             />
           </div>

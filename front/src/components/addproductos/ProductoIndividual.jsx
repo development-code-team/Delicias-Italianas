@@ -37,7 +37,7 @@ function ProductoIndividual({producto}){
                             <li className='list-group-item'>{producto.nombre}</li>
                             <li className='list-group-item'>{producto.precio}</li>
                             <li className='list-group-item'>{producto.descripcion}</li>
-                            <img className='list-group-item' src= {producto.imagen} ></img>
+                            <img className='list-group-item' src= {producto.imagen[0].url} ></img>
                             <li className='list-group-item'>{producto.inventario}</li>
                             <li className='list-group-item'>{producto.fechaCreacion}</li>
                         </ul>

@@ -1,20 +1,11 @@
 //Importar modelo
 const producto = require("../models/product")
+const cloudinary=require("cloudinary")
 
 //Import manejo de errores
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const ErrorHandler = require("../utils/errorHandler");
 
-//Crear nuevo producto
-exports.newProduct=catchAsyncErrors( async (req,res,next) => {
-    const product = await producto.create(req.body);
-    
-    res.status(201).json({
-        success:true,
-        product
-    })
-
-})
 
 // Metodo get all productos
 exports.getAll=catchAsyncErrors( async (req,res,next) => {
@@ -25,7 +16,7 @@ exports.getAll=catchAsyncErrors( async (req,res,next) => {
 
 // Metodo get productos Id
 exports.getProductoId=catchAsyncErrors( async (req,res,next) => {
-        producto.find({idproducto:req.body.idproducto}, function(docs, err){
+        producto.find({id:req.body._id}, function(docs, err){
         if(!err){
             res.send(docs)
         }else{
@@ -62,4 +53,34 @@ exports.updateProducto=catchAsyncErrors(async (req,res) => {
 exports.deleteProducto=catchAsyncErrors( async (req,res,next) => {
     await producto.findByIdAndRemove(req.params.id);
     res.send('Producto eliminado exitosamente')
+})
+
+//Crear nuevo producto /api/productos
+exports.newProduct = catchAsyncErrors(async (req, res, next) => {
+    let imagen=[]
+    if(typeof req.body.imagen==="string"){
+        imagen.push(req.body.imagen)
+    }else{
+        imagen=req.body.imagen
+    }
+
+    let imagenLink=[]
+
+    for (let i=0; i<imagen.length;i++){
+        const result = await cloudinary.v2.uploader.upload(imagen[i],{
+            folder:"products"
+        })
+        imagenLink.push({
+            public_id:result.public_id,
+            url: result.secure_url
+        })
+    }
+
+    req.body.imagen=imagenLink
+    // req.body.user = req.user.id;
+    const product = await producto.create(req.body);
+    res.status(201).json({
+        success: true,
+        product
+    })
 })

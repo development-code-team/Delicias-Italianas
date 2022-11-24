@@ -11,7 +11,7 @@ const { isAuthenticateUser , authorizeRoles } = require("../middleware/auth");
 const Product = require('../models/product')
 
 // Metodo post productos
-router.route('/newproduct').post(/*isAuthenticateUser, authorizeRoles("admin"),*/ newProduct)
+router.route('/producto/nuevo').post(/*isAuthenticateUser, authorizeRoles("admin"),*/ newProduct)
 
 // Metodo get all productos
 router.route('/getall').get(getAll)

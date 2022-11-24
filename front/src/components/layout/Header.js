@@ -32,20 +32,21 @@ export const Header = ({cartItems}) => {
     </a>
 
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    <li class="nav-item">
+    {/*<li class="nav-item">
         <a class="nav-link " href="/ProductsAdmin">Admin</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link " href="/listaventas">Ventas</a>
-    </li>
+    </li>*/}
+    
     <li class="nav-item">
         <a class="nav-link " href="http://localhost:3000/">Menu</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link " href="/agregarproducto"> Añadir un producto </a>
+        <a class="nav-link " href="/nuevoProducto"> Añadir un producto </a>
     </li>
     <li class="nav-item">
         <a class="nav-link " href="/listaproductos"> Visualizar productos </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link " href="/listaventas">Ventas</a>
     </li>
     </ul>
     
